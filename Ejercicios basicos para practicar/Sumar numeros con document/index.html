@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main
+      style="
+        background-color: bisque;
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 20px;
+      "
+    >
+      <div>
+        <label for="numero1">Numero1:</label>
+        <input
+          type="number"
+          id="Numero1"
+          style="width: 100px; height: 40px; border-radius: 5px"
+        />
+      </div>
+      <div>
+        <label for="numero2">Numero2:</label>
+        <input
+          type="number"
+          id="Numero2"
+          style="width: 100px; height: 40px; border-radius: 5px"
+        />
+      </div>
+      <button
+        id="Sumar"
+        style="
+          font-size: 20px;
+          width: 150px;
+          height: 50px;
+          border-radius: 5px;
+          background-color: rgb(93, 186, 93);
+        "
+      >
+        Sumar
+      </button>
+      <div
+        id="Resultado"
+        style="
+          width: 100px;
+          height: 80px;
+          background-color: white;
+          color: black;
+          font-size: 20px;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px;
+        "
+      ></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
