@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat+Alternates:ital,wght@1,100&display=swap");
+* {
+  box-sizing: border-box;
+}
+html {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+body {
+  font-family: Montserrat;
+  margin-left: 100px;
+  margin-right: 100px;
+  max-width: 1280px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+nav {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+nav p {
+  font-family: Montserrat;
+  font-size: 16px;
+  text-decoration: none;
+}
+.listas {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.icons {
+  width: 200px;
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  font-size: 34px;
+  font-weight: 600;
+  font-family: Montserrat;
+  padding-left: 20px;
+}
+.container-tarjetas {
+  max-width: 90%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.imagen img {
+  border-radius: 10px;
+  width: 280px;
+  height: 400px;
+}
+.texto-imagen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0px;
+  font-size: 20px;
+  font-family: Montserrat;
+}
+.prices {
+  font-weight: 600;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.texto-imagen p {
+  margin-left: 10px;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 16px 32px;
+}
+footer {
+  background-color: #212429;
+  width: 100%;
+  height: 110px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.container-footer {
+  flex-direction: row;
+  display: flex;
+}
+.container-footer img {
+  width: 30px;
+  height: 30px;
+}
+.container-footer p {
+  color: white;
+  font-size: 16px;
+  position: relative;
+  left: 10px;
+}
+.imagen-container {
+  width: 60px;
+  height: 60px;
+
+  border-radius: 100%;
+  background-color: #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 376px) {
+  nav {
+    display: block;
+    margin: 20px;
+    height: 250px;
+  }
+  .listas {
+    display: block;
+    margin: 20px;
+  }
+  hr {
+    max-width: 70%;
+  }
+  .hamburguesa {
+    height: 50px;
+  }
+  .icons {
+    width: 100px;
+    gap: 5px;
+    margin-left: 20px;
+  }
+  h1 {
+    width: 50%;
+    display: block;
+    margin-left: 30px;
+  }
+  footer {
+    height: auto;
+    display: block;
+    padding: 20px;
+  }
+  .container-footer {
+    margin: 10px;
+  }
+}
