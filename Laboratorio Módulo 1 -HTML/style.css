@@ -2,18 +2,19 @@
 * {
   box-sizing: border-box;
 }
-html {
+/* html {
   justify-content: center;
   align-items: center;
   display: flex;
-}
+} */
 body {
   font-family: Montserrat;
-  margin-left: 100px;
+  /* margin-left: 100px;
   margin-right: 100px;
   margin-top: 0px;
-  padding-top: 0px;
+  padding-top: 0px; */
 }
+
 nav {
   width: 100%;
   height: 100px;
@@ -49,25 +50,31 @@ nav p {
   justify-content: space-between;
   align-items: center;
 }
+main {
+  display: flex;
+  flex-direction: column;
+}
 h1 {
+  max-width: 1280px;
   font-size: 34px;
   font-weight: 600;
-
-  padding-left: 20px;
+  width: 100%;
+  text-align: left;
 }
 .container-tarjetas {
   max-width: 1280px;
+  width: 100%;
   flex-wrap: wrap;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-evenly;
+
   gap: 20px;
 }
 
 .imagen img {
   border-radius: 10px;
-  width: 280px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
 }
 .texto-imagen {
   display: flex;
@@ -104,10 +111,10 @@ footer {
   flex-direction: row;
   display: flex;
 }
-.container-footer img {
+/* .container-footer img {
   width: 30px;
   height: 30px;
-}
+} */
 .container-footer p {
   color: white;
   font-size: 16px;
@@ -126,33 +133,35 @@ footer {
 }
 @media screen and (max-width: 500px) {
   nav {
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin: 20px;
-    height: 250px;
+    height: auto;
   }
   .listas {
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin: 20px;
   }
-  hr {
-    max-width: 70%;
-  }
+
   .hamburguesa {
     height: 50px;
   }
   .icons {
     width: 100%;
     gap: 5px;
-    margin-left: 20px;
+    padding: 20px;
   }
   h1 {
-    width: 50%;
-    display: block;
-    margin-left: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
   }
   footer {
     height: auto;
-    display: block;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
   }
   .container-footer {
