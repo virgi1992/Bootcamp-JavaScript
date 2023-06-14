@@ -1,1 +1,1 @@
-# Pasando fotos segundarias a la principal
+# Pasando fotos secundarias a la principal
