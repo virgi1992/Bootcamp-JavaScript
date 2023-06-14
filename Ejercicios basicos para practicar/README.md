@@ -1,1 +1,1 @@
-#Ejercicios Básicos para ir practicando JavaScript
+# Ejercicios Básicos para ir practicando JavaScript

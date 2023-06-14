@@ -11,3 +11,19 @@ function sumar() {
 const botonSumar = document.getElementById("Sumar");
 
 botonSumar.addEventListener(`click`, sumar);
+
+//Sacar por pantalla el Nombre completo de Jose Perez
+
+function nombreCompleto() {
+  const nombre = document.getElementById("nombre").value;
+
+  const apellido = document.getElementById("apellido").value;
+
+  const resultado2 = `¡¡ Hola ${nombre}  ${apellido} !!`;
+
+  document.getElementById("resultado").innerHTML = resultado2;
+}
+
+const botonJuntar = document.getElementById("enviar");
+
+botonJuntar.addEventListener(`click`, nombreCompleto);
