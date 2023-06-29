@@ -1,12 +1,18 @@
 #foto-principal {
   max-height: 400px;
+  width: 100%;
+  margin: 10px;
 }
 
 .miniatura {
   height: 100px;
+  width: 25%;
   border: 1px solid gray;
-  margin-right: 10px;
+  margin: 10px;
+
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
 }
 
 :root {

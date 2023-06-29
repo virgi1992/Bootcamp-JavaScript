@@ -8,11 +8,55 @@
     <title>Vite + TS</title>
   </head>
   <body>
-    <div class="turno-display">
-      <h1 class="numero-turno">01</h1>
-      <p class="texto-turno">Por favor, acérquese al mostrador</p>
-    </div>
+    <div id="app">
+      <button id="boton-anterior">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-chevron-left"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M15 6l-6 6l6 6"></path>
+        </svg>
+      </button>
 
+      <div class="turno-display" id="turno-01">
+        <h1 id="numero-turno" class="numero-turno">0</h1>
+        <p class="texto-turno">Por favor, acérquese al mostrador</p>
+      </div>
+
+      <button id="boton-siguiente">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-chevron-right"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M9 6l6 6l-6 6"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="change">
+      <label for="number">Turno: </label>
+      <input type="number" id="numero" placeholder="Seleccione el turno: " />
+      <button class="cambiar" id="cambiar-numero">Cambiar</button>
+
+      <button class="reset" id="reset-numero">Reset</button>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
