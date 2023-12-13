@@ -83,15 +83,18 @@ a la especialidad de Pediatría*/
 const obtenPacientesAsignadosAPediatria = (
   pacientes: Pacientes[]): Pacientes[] => {
     
+const pacientesQueSonPediatra=[];
+
+
    for (let i=0; i<pacientes.length; i++){
     if(pacientes[i].especialidad==="Pediatra"){
-      console.log("Los pacientes asigandos a pediatria son : " + pacientes[i].nombre)
+      pacientesQueSonPediatra.push(pacientes[i]);
     }
    }
-   return pacientes;
+   return pacientesQueSonPediatra;
 };
 
-obtenPacientesAsignadosAPediatria(pacientes)
+console.log(obtenPacientesAsignadosAPediatria(pacientes));
 
 /*Apartado 1:
 b) Queremos extraer la lista de pacientes asignados a Pediatría y
@@ -99,14 +102,15 @@ b) Queremos extraer la lista de pacientes asignados a Pediatría y
 
 const obtenPacientesAsignadosAPediatriaYMenorDeDiezAnios = (
   pacientes: Pacientes[]): Pacientes[] => {
+    const pacientesMenorDeDiez=[];
     for (let i=0; i<pacientes.length;i++){
       if(pacientes[i].especialidad==="Pediatra" && pacientes[i].edad<10){
-        console.log("El paciente de pediatria menor a 10 años es: " + pacientes[i].nombre);
+        pacientesMenorDeDiez.push(pacientes[i]);
       }
     }
-    return pacientes;
+    return pacientesMenorDeDiez;
 };
-obtenPacientesAsignadosAPediatriaYMenorDeDiezAnios(pacientes);
+console.log(obtenPacientesAsignadosAPediatriaYMenorDeDiezAnios(pacientes));
 
 /* APARTADO 2: 
 Queremos activar el protocolo de urgencia si cualquier de los 
@@ -117,19 +121,16 @@ Es decir, crear una función que devuelve true/false
 dependiendo si se da la condición, algo así como:*/
 
 const activarProtocoloUrgencia =(pacientes: Pacientes[]): boolean => {
-  let protocolo= false;
+
+  
   for (let i=0; i<pacientes.length; i++){
     if(pacientes[i].frecuenciaCardiaca>100 && pacientes[i].temperatura>39){
-      protocolo=true;
-      console.log("Se ha activado el protocolo de urgencia,😱")
-    }else {
-      protocolo;
-      console.log("Tranquilos, falsa alarma, 😆")
+     return true;
     }
   }
-  return protocolo;
+  return false;
 };
-activarProtocoloUrgencia(pacientes);
+console.log(activarProtocoloUrgencia(pacientes));
 
 
 /*Apartado 3
@@ -144,10 +145,9 @@ const reasignaPacientesAMedicoFamilia = (
       pacientes[i].especialidad="Medico de familia";
     }
    }
-   console.log(pacientes);
     return pacientes;
 };
-reasignaPacientesAMedicoFamilia(pacientes);
+console.log(reasignaPacientesAMedicoFamilia(pacientes));
 
 /*Apartado 4
 Queremos saber si podemos mandar al Pediatra a casa
@@ -155,16 +155,15 @@ Queremos saber si podemos mandar al Pediatra a casa
  algún paciente asignado a pediatría*/
 
 const hayPacientesDePediatria = (pacientes: Pacientes[]): boolean => {
-  let listaAsignadaAPediatria=true;
+
   for (let i=0; i<pacientes.length; i++){
-    if(pacientes[i].especialidad==="Pediatra" && !listaAsignadaAPediatria){
-      listaAsignadaAPediatria=false;
+    if(pacientes[i].especialidad==="Pediatra"){
+      return true
     }
   }
-  console.log(listaAsignadaAPediatria);
-  return listaAsignadaAPediatria;
+  return false;
 };
-hayPacientesDePediatria(pacientes);
+console.log(hayPacientesDePediatria(pacientes));
 
 /*Apartado 5
 Queremos calcular el número total de pacientes que están 
@@ -178,13 +177,14 @@ interface NumeroPacientesPorEspecialidad {
 }
 
 const totalPacientesFiltradosPorEspecialidad=(pacientes:Pacientes[],especialidad:Especialidad)=>{
-  return pacientes.reduce((totalPacientes, paciente)=> {
-    if(paciente.especialidad===especialidad){
-      return ++totalPacientes;
-    }else{
-      return totalPacientes;
+  let totalPacientes=0;
+
+  for(let i=0; i<pacientes.length; i++){
+    if(pacientes[i].especialidad===especialidad){
+      totalPacientes++;
     }
-  },0)
+  }
+ return totalPacientes;
 }
 
 

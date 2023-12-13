@@ -1,0 +1,30 @@
+*{
+  box-sizing: border-box;
+}
+
+/* prueba de concepto 3- Mostrar un Grid de cartas */
+.contenedor{
+  padding: 5px;
+  background-color: rgb(168, 244, 244);
+  width: 500px;
+  height: 450px;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows:repeat(3,1fr);
+
+}
+.item{
+  background-color: rgb(134, 192, 243);
+  border-radius: 5px;
+  }
+.item:hover{
+  background-color: blue;
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;  
+}
+.item1{
+  width: 118px;
+  height: 145px;
+  
+}
