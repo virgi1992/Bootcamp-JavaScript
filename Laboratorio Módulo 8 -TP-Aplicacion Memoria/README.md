@@ -1,1 +1,2 @@
-# Juego de las Parejas , donde pulsamos una carta y se volteará, si coincide su indice con el de la segunda carta pulsada se mantendrá la imagen, si no volvera a voltearse sin verse la imagen de la carta, así hasta que encontremos todas las parejas.
+# Juego de las Parejas
+> donde pulsamos una carta y se volteará, si coincide su indice con el de la segunda carta pulsada se mantendrá la imagen, si no volvera a voltearse sin verse la imagen de la carta, así hasta que encontremos todas las parejas.
