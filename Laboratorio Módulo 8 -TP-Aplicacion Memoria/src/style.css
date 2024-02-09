@@ -28,3 +28,11 @@
   height: 145px;
   
 }
+.item img{
+  width: 118px;
+  height: 145px;
+}
+.botonEmpezarPartida{
+  position: relative;
+  top: 3em;
+}
